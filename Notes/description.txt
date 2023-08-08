@@ -1,0 +1,9 @@
+My page will contain:
+
+1.Home page (description of myself + passion + motivation + university)
+
+
+2.projects page (University proijects, crackmes, ...)
+
+
+3.Contact info (all links + phone + email)

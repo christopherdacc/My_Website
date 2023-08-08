@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+
+<html>
+        
+
+    <head>
+        <title>About</title>
+        <link rel='icon' type='image/x-icon' href='images_and_logos/favicon.ico'/>
+        <meta name='author' content='Christopher Daccache'/>
+        <meta name='description' content='Home page, introduction'/>
+        <meta name='keyword' content='christopher daccache, christopher, daccache, chris daccache, chris, dacc, chris dacc, home'/>
+        <meta name='robot' content='none'/>
+        <meta http-equiv='content-type' content='text/html ; charset=utf-8'/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href='Styles_css/Styles_home.css' rel='stylesheet' type='text/css' />
+        <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css'>
+        <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css'>
+        <script src='Scripts_home/slideshow.js' defer></script>
+        <script src='Scripts_home/DOMContentLoaded.js'></script>
+    </head>
+   
+    <body>
+        
+         <div class='Container'>
+            <nav class='navbar'>
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="#Section1">Intro</a></li>
+                    <li><a href="#Section2">Description</a></li>
+                    <li><a href="#Section3">Content</a></li>
+                    <li><a href="#Section4">Contact</a></li>
+                 </ul>    
+             </nav>
+            <section id='Section1'>
+                <div id='Title1'>Christopher</div>
+                <div id='Title2'>Daccache</div>
+                
+                <script src="https://unpkg.com/split-type"></script>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug==" crossorigin="anonymous" referrerpolicy="no-referrer">
+                </script>
+                <script src='Scripts_home/home_title.js'></script>
+            </section>
+             <!--Section 1 end-->
+             
+            <section id='Section2'>
+                <div id='Welcome'>Welcome to my personal website! </div>
+                <div id='exparagraph'>This space is a reflection of my journey and aspirations, capturing the essence of why I created this platform. It all began with the desire for a challenge, a place where I could showcase my skills and expertise while venturing beyond the ordinary.</div>
+            </section>
+            <!--Section 2 end--> 
+             
+            <section id='Section3'>
+                
+                <div class='image-container'>
+                    <i id='left' class='fa-solid fa-angle-left'></i>
+                    <div class='Images'>
+                
+                       <a href=About.html>
+                           <img src='images_and_logos/Profile_icon.png' alt='Clickable Image' data-index='1' draggable="false">
+                        </a>
+                    
+                   
+                        <a href=Projects.html>
+                            <img src='images_and_logos/Project_icon.png' alt='Projects Icon' data-index='2' draggable="false">
+                        </a>
+                        
+                    
+                    
+                        <a href=Certifications.html>
+                            <img src='images_and_logos/certification_icon.png' alt='Certification Icon' data-index='3' draggable="false">
+                        </a>
+                        
+                    
+                        <a href=Entertainement.html>
+                            <img src='images_and_logos/Entertainment_icon.png' alt='Entertainment Icon' data-index='4' draggable="false">
+                        </a>
+                
+                        
+                    </div>
+                    <i id='right' class='fa-solid fa-angle-right'></i>
+                </div>
+                    
+                
+                
+                
+             </section>
+             <!--Section 3 end-->
+             <!--this section 4 is under developpement-->
+             <section id='Section4'>
+                 
+                 <div id='underdev'><script src="Scripts_home/contact_text.js"></script></div>
+                 
+                 
+                 <!--
+                 <div class='contact-section'>
+                 <div class='contact-info'>
+                     <div><i class='fas fa-map-marker-alt'>France, Reims 51100</i></div>
+                     <div><i class='fas fa-envelope'></i>christopherdaccache@outlook.com</div>
+                     <div><i class='fas fa-phone'></i>+33 7 58 81 92 74</div>
+                 </div>
+                 <div class='contact-form'>
+                    <h2>Contact Me</h2>
+                     <form class='contat' action='/Projects/My_Website/main/Scripts_home/process_form.php' method='post'>
+                         <input type='text' id='name' name='name' class='text-box' placeholder="Your Name" required>
+                         <input type='email' id='email' name='email' class='text-box' placeholder="Your Email" required>
+                         <textarea name='message' id='message' rows='5' placeholder="Your Message" required></textarea>
+                         <button type='submit' name='submit' class='send-btn' value='Send'>Submit</button>
+                         
+                     
+                     </form>
+                 
+                 
+                 </div>
+                 
+                 
+                </div> -->   
+             </section> 
+             <!--Section 4 end-->
+             
+           
+        </div>
+        
+    <script src='https://smtpjs.com/v3/smtp.js'></script>   
+    </body>
+    
+    
+</html>

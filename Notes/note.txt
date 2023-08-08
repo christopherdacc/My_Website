@@ -1,0 +1,1 @@
+<meta http-equiv='refresh' content='5,http://www.google.com' ////go to google.com after 5s

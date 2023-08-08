@@ -1,0 +1,43 @@
+*{
+    padding: 0;
+    margin:0;
+}
+
+body{
+    background-color: #111;
+    display: grid; 
+}           
+
+.Container{
+    display:grid; 
+    place-content: center; 
+    height:400vh;
+}
+            
+Section{
+    scroll-snap-align:center;
+}          
+
+#Section1{
+    display:grid; 
+    place-content: center;
+    height:100vh;
+}
+
+#Section2{
+    display:grid; 
+    place-content: center;
+    height:100vh;
+}
+
+#Section3{
+    display:grid; 
+    place-content: center;
+    height:100vh;
+}
+
+#Section4{
+    display:grid; 
+    place-content: center;
+    height:100vh;
+}

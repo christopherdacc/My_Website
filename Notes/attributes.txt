@@ -1,0 +1,214 @@
+head tags:
+---------------------------------------------------------------------------------------------------------------------------------------------
+1.this is for the search engine to analyse the webpage for better seo effects (for search engine)
+	<meta name='keywords' content='power pc, download, repair services'/>
+2.this is also for the search engine wich give the description of the page (for search engine)
+	<meta name='description' content='this page is a test page and this content should hold the description of the page'/>
+3.this will tell us who is the owner of the page
+	<meta name='author' content=''/>
+4.this will give us the ownership of the page
+	<meta name='copyright' content=''/>
+5.this is to describe back-end technology (optional)
+	<meta name='generator' content=''/>
+6.this will decide if the website is open to search engines or not 
+	<meta name='robot' content='all(for best seo effect) or none(for internal system pages)'/>
+7.this reload the page after 5s and take us to google.com (for search engine and browser)
+	<meta http-equiv='refresh' content='5;http://www.google.com'/>
+8.this is for multilanguage use in websites
+	<meta http-equiv='content-type' content='text/html;charset=utf-8'/>
+
+Body tags:
+---------------------------------------------------------------------------------------------------------------------------------------------
+1.<p>Paragraph tag</p> (starts in a new line)
+
+inline CSS: (stored in the tag)
+ex: <p style='color:red(or color code);font-weight:bold(or normal, bolder, light, lighter);'>This is a red bold paragraph</p>
+
+internal CSS: (stored in the head area)
+<style>
+	*{color:red}			//universal selector
+	p{color:red}			//type selector (p is the paragraph tag[this will affect all p tags])
+	.class_name{}			//.class selector (we must assignt a class name in the tag we want to style ex: <p class='red'>texr</p>)
+	#ID_name{}			//#ID selector (we must assignt a ID name in the tag we want to style ex: <p id='ID+_green'>texr</p>)
+</style>
+
+2.<span>this tag is an inline tag wich means that it does not occupy all the line but only the necessary space for the text inside it</span>
+
+++Example of style tags:
+	{background:blue}
+	{font-size:100px}
+Note : Block tag's width and height can be controlled by CSS, but Inline tag's width and height are decided by it's contents.
+
+3.<h1></h1> till <h6></h6> (block tag)
+
+To use our own imported font we need to download it and add it to the syle tage:
+	@font-face{font-family:font_name(ex"my-font);src:url(font.ttf)}
+
+we can use em instead of px for font sizes.
+
+
+Inserting image:
+
+	<img src='image_name.extension' alt='name of image if there is error' title='when cursor is on image'/>
+	<img> tag is as the span tag (share a line) inline-block category
+	best images types (.png for transparent backgroung .jpeg for other or .gif)
+	ppi should always be 72 (best value) (use photoshop)
+	better to adjust image width and height in css so if there is an error the other images will not be affected
+
+Insersting icon:
+
+	ex: body{background:url('image.jpg'); background-repeat:repeat-10 (or x or y or no-repeat)}	/this will add 10 images to the background
+	add it in <style></style>
+	better to use small images and repeat it (best to reduce image processing = faster loading)
+
+
+use image as background:
+	
+	option 1:
+	add to the body(background) css template the following command : background-attachment:fixed;
+	ex :  body{background:url('image.jpg'); background-repeat:no-repeat; background-attachment:fixed;}
+	
+	option 2:
+	we just replace fixed by scroll (the image will stay at it place while we scroll)
+
+	
+image sprite: (using 1 image that contains several icons this will reduce the processing time)
+
+	we use a new css template command called : backgroud-position: +or- x +or- y;
+	ex : backgroud-position:-300px -300px;
+	N.B: we can add the backgroud-repeat and the background-position to the initial background:url
+	ex: div{width:1020px;height:1020px;border:10px dashed red; background:url(logo.png) no-repeat -100px -100px;}
+
+------------------------------new input------------------------------
+
+Input boxes:
+	
+	default code:
+	<form action='#' method='POST or GET'> (the # means empty, POST is for security reasons and get is not secured)
+		<input name='set_by_u' type='password' value='default value' /> (we can also set the type to hidden wich is an invisible password but the password type is with ***)
+		<input name='submit' type='submit' value='submit button' /> (also for the type we can have a text type)
+	</form>
+
+	Use an image as the submit button:
+	<input name='submit' type='image' src='submit.png' value='submit' />
+
+	we can also style the inputs in the <style> part of the CSS
+
+	we have also different type of type in the input:
+		checkbox
+		radio (if name is the same only 1 radio tag is selected)
+
+	we can also replace the input tag by the select tag:
+		<select>
+		<option value='1'>1st</option>
+		<option value='1'>2nd</option>
+		<option value='1'>3rd</option>
+		<option value='1'>4th</option>
+		</select>
+
+
+Importing files that is not in the main folder:
+	
+	absolut url: location of the file in the computer
+	relative url: location of the file in relation to the current file's location
+	it tells the system how to find the destination file from the current file location
+	relative url is better for website
+
+	ex 1: 	great grandparent file 
+		grandparent file
+		parent file		
+		current file	to go to the parent (./../) to go to the great.. (./../../../)
+	
+	ex 2: 					galaxy(parent)
+			earth(child)					mars(child)
+		to go from earth to mars we type : ./../mars
+
+Import extrernal CSS files:
+
+	N.B: we do not need the style tag in the css file
+	method 1:
+	<link href='./../css/css.css' rel='stylesheet' type='text/css' />
+	method 2:
+	in style tag: @import url('./../css/css.css')
+	we use this method to load the page withoud style and let the style load alone(used for slow internet users)
+
+Using comments: 
+	
+	<!--the comment--> (can occupy multiple lines) this is for html comments
+	/*the comment*/ (can also occypy multiple lines) this is for css comments
+	the css comments can ony be used in the slye tag
+
+
+Hyperlink:
+
+	<a></a> inline tag
+	hyperlink type 1:
+		<a href='./file.html'>hyperlink text</a>
+	hyperlink type 2:
+		<a href='./file.html'><img src='image.png' src='image'/></a>
+	hyperlink that opens destination page in a new window:
+		<a href='./file.html' target='_blank'>New window hyperlink</a>
+	anchor hyperlink: method 1:
+		ex: 	<a href='#thirteen'>13th div</a>	(will take me to the 13th div)
+			<div id='thirteen'>13th div</div>
+	method 2: (anchor)
+		ex:	<a href='#thirteen'>13th div</a>
+			<a name='thirteen'><div>13th div</div></a>	
+	N.B: if webpage not long enough the last parts will not appear on the top page
+
+Quasi selector:
+
+	tag used in the style tag
+	ex: 	<style>
+			a:link {color:blue;font-family:impact;}		(default style)
+			a:visites {color:grey;}				(already clicked)
+			a:hover {color:red;font-size:99px;}		(when we put the mouse the style will apply)
+			a:active {color:green;font-falily:helvetica;}	(when we click the style will apply)
+			N.B: order is important (link>visited>hover>active)
+		</style>
+		<body>
+			<a href='#'>text of the hyperlink</a>
+		</body>
+
+Navigation bar : list of hyperlinks
+
+	entire area clickable
+	to do that we convert the <a> tag (inline tag) into a block tag or inline block tag
+	ex: 	<style>
+			a{background:teal;
+			display:block;border:white dashed 2px;	(converting a tag to block tag)
+			width:600px;height:100px;}		(now the wholde area is clickable not only the text)
+		</style>
+		<body>
+			<a href='#'> Atag is by default inline</a>
+			<a href='#'> Atag is by default inline</a>
+			<a href='#'> Atag is by default inline</a>
+			<a href='#'> Atag is by default inline</a>
+		</body>
+
+
+video 9.1
+
+
+
+
+the right video for smooth scrolling:
+https://www.youtube.com/watch?v=y9nlfqT4s9s&ab_channel=TraversyMedia
+
+nice text animation :
+https://www.youtube.com/watch?v=ccO2B40zkv4&ab_channel=OnlineTutorials
+
+image slideshow :
+https://www.youtube.com/watch?v=JX5qDzWDF4U&ab_channel=CodeInstinct
+
+to watch for contact form: 
+https://www.youtube.com/watch?v=Yg6POD0M30w&ab_channel=ADesignerWhoCodes
+
+
+
+
+
+
+
+
+

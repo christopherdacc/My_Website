@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+<html>
+        
+
+    <head>
+        <title>About</title>
+        <link rel='icon' type='image/x-icon' href='images_and_logos/favicon.ico'/>
+        <meta name='author' content='Christopher Daccache'/>
+        <meta name='description' content='Home page, introduction'/>
+        <meta name='keyword' content='christopher daccache, christopher, daccache, chris daccache, chris, dacc, chris dacc, home'/>
+        <meta name='robot' content='none'/>
+        <meta http-equiv='content-type' content='text/html ; charset=utf-8'/>
+        
+        <style>
+            
+            header{display:grid; place-content: center; height:100vh;}
+            #Title1{font-size: 7rem; font-family:courier, monospace;color:white; clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);}
+            #Title2{font-size: 7rem; font-family:courier, monospace;color:white; clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);}
+            .char {transform: translateY(115px); transition: transform .5s;}
+            
+            body {background-color: #111;display: grid;}
+            
+            #Section2{display:grid; place-content: center; height:100vh;}
+            
+            #Welcome{color:white;text-align:center;font-size:50px}
+            #exparagraph{color:white;text-align:center;font-size:50px}
+            
+            
+            
+            
+        </style>
+    </head>
+    <header>
+        <section id='Section1'>
+            <div id='Title1'>Christopher</div>
+            <div id='Title2'>Daccache</div>
+            <script src="https://unpkg.com/split-type"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug==" crossorigin="anonymous" referrerpolicy="no-referrer">
+            </script>
+            <script src='Scripts/home_title1.js'></script>
+            <script src='Scripts/home_title2.js'></script>
+        </section>
+    </header>
+    
+    
+    <body>
+        <section id='Section2'>
+            <div id='Welcome'>Welcome to my personal website! </div>
+            <div id='exparagraph'>This space is a reflection of my journey and aspirations, capturing the essence of why I created this platform. It all began with the desire for a challenge, a place where I could showcase my skills and expertise while venturing beyond the ordinary. </div>
+        </section>
+    
+    
+    
+    </body>
+    
+    
+</html>
