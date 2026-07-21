@@ -16,13 +16,13 @@
         <script src='Scripts_home/slideshow.js' defer></script>
         <script src='Scripts_home/DOMContentLoaded.js'></script>
 
-        <!-- Terminal Contact Form Specific Styling -->
+        <!-- Terminal & Footer Specific Styling -->
         <style>
             #Section4 {
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                padding: 40px 20px;
+                padding: 40px 20px 20px 20px;
             }
 
             .terminal-container {
@@ -34,7 +34,7 @@
                 box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
                 overflow: hidden;
                 font-family: 'Fira Code', monospace;
-                color: #00ff66; /* Neon Green (change to #ffffff for Black/White) */
+                color: #00ff66;
                 text-align: left;
             }
 
@@ -89,6 +89,26 @@
             .dim { color: #008833; }
             .error { color: #ff5f56; }
             .success { color: #27c93f; }
+
+            /* --- FOOTER STYLING --- */
+            .site-footer {
+                text-align: center;
+                padding: 30px 20px;
+                margin-top: 20px;
+                border-top: 1px solid #1f1f1f;
+                font-family: 'Fira Code', monospace;
+                font-size: 0.85rem;
+                color: #777777;
+            }
+
+            .site-footer p {
+                margin: 4px 0;
+            }
+
+            .site-footer .highlight {
+                color: #aaaaaa;
+                font-weight: 600;
+            }
         </style>
     </head>
    
@@ -168,12 +188,21 @@
                 </div>
             </section> 
              <!--Section 4 end-->
+
+            <!-- Footer / Copyright Notice -->
+            <footer class="site-footer">
+                <p>&copy; <span id="current-year"></span> <span class="highlight">Christopher Daccache</span>. All rights reserved.</p>
+                <p>This website and its content are copyright protected and owned by Christopher Daccache.</p>
+            </footer>
+
         </div>
         
-        <!-- Terminal Form Logic -->
+        <!-- Script for Terminal Form & Dynamic Footer Year -->
         <script>
-            // --- CONFIGURATION ---
-            // Get your free API access key at https://web3forms.com and paste it here:
+            // Automatically update footer year
+            document.getElementById("current-year").textContent = new Date().getFullYear();
+
+            // --- WEB3FORMS CONFIGURATION ---
             const WEB3FORMS_ACCESS_KEY = "8fd33d78-0f54-4987-8d29-ae8f7ae2c08c";
 
             const steps = ["name", "email", "message"];
