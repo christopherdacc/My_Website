@@ -1,28 +1,36 @@
 <!DOCTYPE html>
-<html> 
+<html lang="en"> 
     <head>
-        <title>About</title>
+        <title>About | Christopher Daccache</title>
         <link rel='icon' type='image/x-icon' href='images_and_logos/favicon.ico'/>
         <meta name='author' content='Christopher Daccache'/>
         <meta name='description' content='Home page, introduction'/>
         <meta name='keyword' content='christopher daccache, christopher, daccache, chris daccache, chris, dacc, chris dacc, home'/>
         <meta name='robot' content='none'/>
-        <meta http-equiv='content-type' content='text/html ; charset=utf-8'/>
+        <meta http-equiv='content-type' content='text/html; charset=utf-8'/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- Stylesheets -->
         <link href='Styles_css/Styles_home.css' rel='stylesheet' type='text/css' />
         <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css'>
         <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css'>
         <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&display=swap" rel="stylesheet">
+        
+        <!-- Scripts -->
         <script src='Scripts_home/slideshow.js' defer></script>
         <script src='Scripts_home/DOMContentLoaded.js'></script>
 
-        <!-- Terminal & Footer Specific Styling -->
+        <!-- Section 4 Terminal & Footer CSS (Scroll-Snap Compatible) -->
         <style>
             #Section4 {
+                height: 100vh; /* Full viewport height for scroll snapping */
                 display: flex;
-                justify-content: center;
+                flex-direction: column;
+                justify-content: space-between;
                 align-items: center;
-                padding: 40px 20px 20px 20px;
+                padding: 20px;
+                box-sizing: border-box;
+                scroll-snap-align: start;
             }
 
             .terminal-container {
@@ -34,8 +42,10 @@
                 box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
                 overflow: hidden;
                 font-family: 'Fira Code', monospace;
-                color: #00ff66;
+                color: #00ff66; /* Neon green text */
                 text-align: left;
+                margin-top: auto; /* Centers terminal within section */
+                margin-bottom: auto;
             }
 
             .terminal-header {
@@ -53,9 +63,9 @@
             .terminal-header .title { color: #888; font-size: 0.85rem; margin-left: auto; margin-right: auto; }
 
             .terminal-body {
-                padding: 25px;
-                min-height: 380px;
-                max-height: 480px;
+                padding: 20px;
+                min-height: 280px;
+                max-height: 360px; /* Fits alongside footer on laptops */
                 overflow-y: auto;
                 line-height: 1.6;
                 font-size: 0.95rem;
@@ -90,19 +100,18 @@
             .error { color: #ff5f56; }
             .success { color: #27c93f; }
 
-            /* --- FOOTER STYLING --- */
+            /* Footer Styling */
             .site-footer {
                 text-align: center;
-                padding: 30px 20px;
-                margin-top: 20px;
-                border-top: 1px solid #1f1f1f;
+                padding: 15px 10px 5px 10px;
                 font-family: 'Fira Code', monospace;
-                font-size: 0.85rem;
+                font-size: 0.8rem;
                 color: #777777;
+                width: 100%;
             }
 
             .site-footer p {
-                margin: 4px 0;
+                margin: 3px 0;
             }
 
             .site-footer .highlight {
@@ -122,25 +131,27 @@
                     <li><a href="#Section3">Content</a></li>
                     <li><a href="#Section4">Contact</a></li>
                  </ul>    
-              </nav>
+            </nav>
 
+            <!-- Section 1 -->
             <section id='Section1'>
                 <div id='Title1'>Christopher</div>
                 <div id='Title2'>Daccache</div>
                 
                 <script src="https://unpkg.com/split-type"></script>
-                <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug==" crossorigin="anonymous" referrerpolicy="no-referrer">
-                </script>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
                 <script src='Scripts_home/home_title.js'></script>
             </section>
-             <!--Section 1 end-->
+            <!-- Section 1 end -->
              
+            <!-- Section 2 -->
             <section id='Section2'>
-                <div id='Welcome'>Welcome to my personal website! </div>
+                <div id='Welcome'>Welcome to my personal website!</div>
                 <div id='exparagraph'>This space is a reflection of my journey and aspirations, capturing the essence of why I created this platform. It all began with the desire for a challenge, a place where I could showcase my skills and expertise while venturing beyond the ordinary.</div>
             </section>
-            <!--Section 2 end--> 
+            <!-- Section 2 end --> 
              
+            <!-- Section 3 -->
             <section id='Section3'>
                 <div class='image-container'>
                     <i id='left' class='fa-solid fa-angle-left'></i>
@@ -161,9 +172,9 @@
                     <i id='right' class='fa-solid fa-angle-right'></i>
                 </div>
             </section> 
-             <!--Section 3 end-->
+            <!-- Section 3 end -->
 
-            <!-- Section 4: Interactive Terminal Contact -->
+            <!-- Section 4: Terminal Contact + Footer (Inside same snap container) -->
             <section id='Section4'>
                 <div class="terminal-container">
                     <div class="terminal-header">
@@ -179,31 +190,32 @@
                             <br>
                         </div>
 
-                        <!-- Active Interactive Line -->
+                        <!-- Active Interactive Input Line -->
                         <div class="input-line" id="input-line">
                             <span class="prompt-label" id="prompt-label">Enter your Name:</span>
                             <input type="text" id="terminal-input" class="terminal-input" autocomplete="off">
                         </div>
                     </div>
                 </div>
-            </section> 
-             <!--Section 4 end-->
 
-            <!-- Footer / Copyright Notice -->
-            <footer class="site-footer">
-                <p>&copy; <span id="current-year"></span> <span class="highlight">Christopher Daccache</span>. All rights reserved.</p>
-                <p>This website and its content are copyright protected and owned by Christopher Daccache.</p>
-            </footer>
+                <!-- Footer sitting inside Section 4 -->
+                <footer class="site-footer">
+                    <p>&copy; <span id="current-year"></span> <span class="highlight">Christopher Daccache</span>. All rights reserved.</p>
+                    <p>This website and its content are copyright protected and owned by Christopher Daccache.</p>
+                </footer>
+            </section> 
+            <!-- Section 4 end -->
 
         </div>
         
-        <!-- Script for Terminal Form & Dynamic Footer Year -->
+        <!-- JavaScript Logic -->
         <script>
-            // Automatically update footer year
+            // Dynamically update footer year
             document.getElementById("current-year").textContent = new Date().getFullYear();
 
             // --- WEB3FORMS CONFIGURATION ---
-            const WEB3FORMS_ACCESS_KEY = "8fd33d78-0f54-4987-8d29-ae8f7ae2c08c";
+            // Replace with your real access key from https://web3forms.com
+            const WEB3FORMS_ACCESS_KEY = "YOUR_ACCESS_KEY_HERE";
 
             const steps = ["name", "email", "message"];
             let currentStepIndex = 0;
@@ -285,6 +297,7 @@
                 terminalBody.scrollTop = terminalBody.scrollHeight;
             }
 
+            // Refocus text field when clicking inside terminal
             terminalBody.addEventListener("click", () => terminalInput.focus());
         </script>
     </body>
