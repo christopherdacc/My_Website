@@ -20,15 +20,16 @@
         <script src='Scripts_home/slideshow.js' defer></script>
         <script src='Scripts_home/DOMContentLoaded.js'></script>
 
-        <!-- Section 4 Terminal & Footer CSS (Scroll-Snap Compatible) -->
+        <!-- Section 4 Terminal & Footer CSS (Mobile Responsive & Scroll-Snap Compatible) -->
         <style>
             #Section4 {
-                height: 100vh; /* Full viewport height for scroll snapping */
+                min-height: 100vh;
+                min-height: 100dvh; /* Dynamic viewport height adjusts for mobile keyboards */
                 display: flex;
                 flex-direction: column;
                 justify-content: space-between;
                 align-items: center;
-                padding: 20px;
+                padding: 15px;
                 box-sizing: border-box;
                 scroll-snap-align: start;
             }
@@ -44,7 +45,7 @@
                 font-family: 'Fira Code', monospace;
                 color: #00ff66; /* Neon green text */
                 text-align: left;
-                margin-top: auto; /* Centers terminal within section */
+                margin-top: auto; /* Centers terminal vertically */
                 margin-bottom: auto;
             }
 
@@ -64,8 +65,8 @@
 
             .terminal-body {
                 padding: 20px;
-                min-height: 280px;
-                max-height: 360px; /* Fits alongside footer on laptops */
+                min-height: 220px;
+                max-height: 360px;
                 overflow-y: auto;
                 line-height: 1.6;
                 font-size: 0.95rem;
@@ -83,6 +84,8 @@
                 color: #00ff66;
                 margin-right: 10px;
                 font-weight: 600;
+                white-space: nowrap; /* PREVENTS "ENTER YOUR NAME" FROM BREAKING INTO 2 LINES */
+                flex-shrink: 0;      /* PREVENTS FLEXBOX FROM SQUEEZING LABEL */
             }
 
             .terminal-input {
@@ -93,6 +96,7 @@
                 font-family: 'Fira Code', monospace;
                 font-size: 0.95rem;
                 flex-grow: 1;
+                width: 100%;
                 caret-color: #00ff66;
             }
 
@@ -103,7 +107,7 @@
             /* Footer Styling */
             .site-footer {
                 text-align: center;
-                padding: 15px 10px 5px 10px;
+                padding: 10px 10px 5px 10px;
                 font-family: 'Fira Code', monospace;
                 font-size: 0.8rem;
                 color: #777777;
@@ -117,6 +121,24 @@
             .site-footer .highlight {
                 color: #aaaaaa;
                 font-weight: 600;
+            }
+
+            /* Mobile Specific Adjustments */
+            @media (max-width: 600px) {
+                .terminal-body {
+                    min-height: 180px;
+                    max-height: 220px; /* Reduces terminal height so virtual keyboard fits easily */
+                    padding: 15px;
+                    font-size: 0.85rem;
+                }
+                
+                .prompt-label, .terminal-input {
+                    font-size: 0.85rem;
+                }
+
+                .site-footer {
+                    font-size: 0.75rem;
+                }
             }
         </style>
     </head>
@@ -174,7 +196,7 @@
             </section> 
             <!-- Section 3 end -->
 
-            <!-- Section 4: Terminal Contact + Footer (Inside same snap container) -->
+            <!-- Section 4: Terminal Contact + Footer -->
             <section id='Section4'>
                 <div class="terminal-container">
                     <div class="terminal-header">
@@ -214,7 +236,6 @@
             document.getElementById("current-year").textContent = new Date().getFullYear();
 
             // --- WEB3FORMS CONFIGURATION ---
-            // Replace with your real access key from https://web3forms.com
             const WEB3FORMS_ACCESS_KEY = "YOUR_ACCESS_KEY_HERE";
 
             const steps = ["name", "email", "message"];
@@ -297,7 +318,14 @@
                 terminalBody.scrollTop = terminalBody.scrollHeight;
             }
 
-            // Refocus text field when clicking inside terminal
+            // AUTO-SCROLL TO INPUT WHEN MOBILE KEYBOARD OPENS
+            terminalInput.addEventListener("focus", function() {
+                setTimeout(() => {
+                    terminalInput.scrollIntoView({ behavior: "smooth", block: "center" });
+                }, 300); // Delay allows mobile keyboard animation to finish sliding up
+            });
+
+            // Refocus text field when clicking inside terminal body
             terminalBody.addEventListener("click", () => terminalInput.focus());
         </script>
     </body>
