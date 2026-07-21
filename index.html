@@ -1,8 +1,5 @@
 <!DOCTYPE html>
-
-<html>
-        
-
+<html> 
     <head>
         <title>About</title>
         <link rel='icon' type='image/x-icon' href='images_and_logos/favicon.ico'/>
@@ -15,8 +12,84 @@
         <link href='Styles_css/Styles_home.css' rel='stylesheet' type='text/css' />
         <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css'>
         <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css'>
+        <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&display=swap" rel="stylesheet">
         <script src='Scripts_home/slideshow.js' defer></script>
         <script src='Scripts_home/DOMContentLoaded.js'></script>
+
+        <!-- Terminal Contact Form Specific Styling -->
+        <style>
+            #Section4 {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 40px 20px;
+            }
+
+            .terminal-container {
+                width: 100%;
+                max-width: 750px;
+                background: #181818;
+                border: 1px solid #2a2a2a;
+                border-radius: 8px;
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+                overflow: hidden;
+                font-family: 'Fira Code', monospace;
+                color: #00ff66; /* Neon Green (change to #ffffff for Black/White) */
+                text-align: left;
+            }
+
+            .terminal-header {
+                background: #222;
+                padding: 10px 15px;
+                display: flex;
+                align-items: center;
+                gap: 8px;
+            }
+
+            .terminal-header .btn { width: 12px; height: 12px; border-radius: 50%; display: inline-block; }
+            .terminal-header .red { background: #ff5f56; }
+            .terminal-header .yellow { background: #ffbd2e; }
+            .terminal-header .green { background: #27c93f; }
+            .terminal-header .title { color: #888; font-size: 0.85rem; margin-left: auto; margin-right: auto; }
+
+            .terminal-body {
+                padding: 25px;
+                min-height: 380px;
+                max-height: 480px;
+                overflow-y: auto;
+                line-height: 1.6;
+                font-size: 0.95rem;
+            }
+
+            .terminal-body p { margin-bottom: 6px; }
+
+            .input-line {
+                display: flex;
+                align-items: center;
+                margin-top: 10px;
+            }
+
+            .prompt-label {
+                color: #00ff66;
+                margin-right: 10px;
+                font-weight: 600;
+            }
+
+            .terminal-input {
+                background: transparent;
+                border: none;
+                outline: none;
+                color: #00ff66;
+                font-family: 'Fira Code', monospace;
+                font-size: 0.95rem;
+                flex-grow: 1;
+                caret-color: #00ff66;
+            }
+
+            .dim { color: #008833; }
+            .error { color: #ff5f56; }
+            .success { color: #27c93f; }
+        </style>
     </head>
    
     <body>
@@ -29,7 +102,8 @@
                     <li><a href="#Section3">Content</a></li>
                     <li><a href="#Section4">Contact</a></li>
                  </ul>    
-             </nav>
+              </nav>
+
             <section id='Section1'>
                 <div id='Title1'>Christopher</div>
                 <div id='Title2'>Daccache</div>
@@ -48,78 +122,141 @@
             <!--Section 2 end--> 
              
             <section id='Section3'>
-                
                 <div class='image-container'>
                     <i id='left' class='fa-solid fa-angle-left'></i>
                     <div class='Images'>
-                
-                       <a href=About.html>
+                       <a href="About.html">
                            <img src='images_and_logos/Profile_icon.png' alt='Clickable Image' data-index='1' draggable="false">
                         </a>
-                    
-                   
-                        <a href=Projects.html>
+                        <a href="Projects.html">
                             <img src='images_and_logos/Project_icon.png' alt='Projects Icon' data-index='2' draggable="false">
                         </a>
-                        
-                    
-                    
-                        <a href=Certifications.html>
+                        <a href="Certifications.html">
                             <img src='images_and_logos/certification_icon.png' alt='Certification Icon' data-index='3' draggable="false">
                         </a>
-                        
-                    
-                        <a href=Entertainement.html>
+                        <a href="Entertainement.html">
                             <img src='images_and_logos/Entertainment_icon.png' alt='Entertainment Icon' data-index='4' draggable="false">
                         </a>
-                
-                        
                     </div>
                     <i id='right' class='fa-solid fa-angle-right'></i>
                 </div>
-                    
-                
-                
-                
-             </section>
+            </section> 
              <!--Section 3 end-->
-             <!--this section 4 is under developpement-->
-             <section id='Section4'>
-                 
-                 <div id='underdev'><script src="Scripts_home/contact_text.js"></script></div>
-                 
-                 
-                 <!--
-                 <div class='contact-section'>
-                 <div class='contact-info'>
-                     <div><i class='fas fa-map-marker-alt'>France, Reims 51100</i></div>
-                     <div><i class='fas fa-envelope'></i>christopherdaccache@outlook.com</div>
-                     <div><i class='fas fa-phone'></i>+33 7 58 81 92 74</div>
-                 </div>
-                 <div class='contact-form'>
-                    <h2>Contact Me</h2>
-                     <form class='contat' action='/Projects/My_Website/main/Scripts_home/process_form.php' method='post'>
-                         <input type='text' id='name' name='name' class='text-box' placeholder="Your Name" required>
-                         <input type='email' id='email' name='email' class='text-box' placeholder="Your Email" required>
-                         <textarea name='message' id='message' rows='5' placeholder="Your Message" required></textarea>
-                         <button type='submit' name='submit' class='send-btn' value='Send'>Submit</button>
-                         
-                     
-                     </form>
-                 
-                 
-                 </div>
-                 
-                 
-                </div> -->   
-             </section> 
+
+            <!-- Section 4: Interactive Terminal Contact -->
+            <section id='Section4'>
+                <div class="terminal-container">
+                    <div class="terminal-header">
+                        <span class="btn red"></span>
+                        <span class="btn yellow"></span>
+                        <span class="btn green"></span>
+                        <span class="title">chris@daccache: ~/contact</span>
+                    </div>
+                    <div class="terminal-body" id="terminal-body">
+                        <div id="history">
+                            <p>[SYS_INIT] Contact Gateway Online.</p>
+                            <p class="dim">Type your answers below and press ENTER to submit each step.</p>
+                            <br>
+                        </div>
+
+                        <!-- Active Interactive Line -->
+                        <div class="input-line" id="input-line">
+                            <span class="prompt-label" id="prompt-label">Enter your Name:</span>
+                            <input type="text" id="terminal-input" class="terminal-input" autocomplete="off">
+                        </div>
+                    </div>
+                </div>
+            </section> 
              <!--Section 4 end-->
-             
-           
         </div>
         
-    <script src='https://smtpjs.com/v3/smtp.js'></script>   
+        <!-- Terminal Form Logic -->
+        <script>
+            // --- CONFIGURATION ---
+            // Get your free API access key at https://web3forms.com and paste it here:
+            const WEB3FORMS_ACCESS_KEY = "8fd33d78-0f54-4987-8d29-ae8f7ae2c08c";
+
+            const steps = ["name", "email", "message"];
+            let currentStepIndex = 0;
+
+            const formData = { name: "", email: "", message: "" };
+
+            const historyDiv = document.getElementById("history");
+            const promptLabel = document.getElementById("prompt-label");
+            const terminalInput = document.getElementById("terminal-input");
+            const terminalBody = document.getElementById("terminal-body");
+
+            terminalInput.addEventListener("keydown", function (event) {
+                if (event.key === "Enter") {
+                    const userInput = terminalInput.value.trim();
+                    if (userInput === "") return;
+
+                    const currentField = steps[currentStepIndex];
+                    historyDiv.innerHTML += `<p><span class="dim">> ${getFieldPrompt(currentField)}</span> ${userInput}</p>`;
+                    formData[currentField] = userInput;
+
+                    terminalInput.value = "";
+                    currentStepIndex++;
+
+                    if (currentStepIndex < steps.length) {
+                        promptLabel.innerText = getFieldPrompt(steps[currentStepIndex]);
+                    } else {
+                        document.getElementById("input-line").style.display = "none";
+                        sendMessage();
+                    }
+
+                    terminalBody.scrollTop = terminalBody.scrollHeight;
+                }
+            });
+
+            function getFieldPrompt(step) {
+                switch (step) {
+                    case "name": return "Enter your Name:";
+                    case "email": return "Enter your Email:";
+                    case "message": return "Enter your Message:";
+                    default: return ">";
+                }
+            }
+
+            async function sendMessage() {
+                historyDiv.innerHTML += `<br><p class="dim">[...] Encrypting and transmitting message to Christopher...</p>`;
+                
+                try {
+                    const response = await fetch("https://api.web3forms.com/submit", {
+                        method: "POST",
+                        headers: {
+                            "Content-Type": "application/json",
+                            "Accept": "application/json"
+                        },
+                        body: JSON.stringify({
+                            access_key: WEB3FORMS_ACCESS_KEY,
+                            name: formData.name,
+                            email: formData.email,
+                            message: formData.message,
+                            subject: `New Portfolio Transmission from ${formData.name}`
+                        })
+                    });
+
+                    const result = await response.json();
+
+                    if (result.success) {
+                        historyDiv.innerHTML += `
+                            <p class="success">[SUCCESS] Message transmitted successfully!</p>
+                            <p class="dim">Thank you, ${formData.name}. I will review your message and reply to ${formData.email} soon.</p>
+                        `;
+                    } else {
+                        throw new Error("API Returned error");
+                    }
+                } catch (error) {
+                    historyDiv.innerHTML += `
+                        <p class="error">[ERROR] Failed to send transmission. Please check your internet connection or email directly.</p>
+                    `;
+                }
+
+                terminalBody.scrollTop = terminalBody.scrollHeight;
+            }
+
+            terminalBody.addEventListener("click", () => terminalInput.focus());
+        </script>
     </body>
-    
-    
 </html>
